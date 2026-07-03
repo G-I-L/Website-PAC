@@ -22,17 +22,17 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 pb-[34px] pt-14 md:px-8 md:pt-16">
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 border-b border-white/[0.09] pb-11 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div className="col-span-2 md:col-span-1">
-            <Link
-              href="/"
-              className="mb-5 inline-block rounded-xl bg-white p-3 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
-            >
+            <Link href="/" className="mb-[18px] inline-flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo-icon.png"
                 alt="People Axis Consultants"
-                width={923}
-                height={346}
-                className="h-11 w-auto"
+                width={330}
+                height={300}
+                className="h-10 w-auto"
               />
+              <span className="text-[1.1rem] font-extrabold text-white">
+                People Axis
+              </span>
             </Link>
             <p className="max-w-[38ch] text-[0.92rem] leading-relaxed text-[#8593ac]">
               Specialist recruitment across Manufacturing, Electronics, IT &amp; Engineering,

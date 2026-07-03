@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="mx-auto flex h-[84px] max-w-6xl items-center justify-between px-6 sm:h-[96px] md:h-[108px] md:px-8">
         <Link href="/" className="inline-flex flex-none items-center">
           <Image
-            src="/logo.png"
+            src="/logo-transparent.png"
             alt="People Axis Consultants"
             width={923}
             height={346}
