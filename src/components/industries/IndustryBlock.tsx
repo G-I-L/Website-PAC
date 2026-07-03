@@ -24,7 +24,7 @@ export default function IndustryBlock({ industry }: { industry: Industry }) {
   return (
     <section
       id={industry.id}
-      className={`scroll-mt-24 ${industry.tint ? "bg-surface" : "bg-white"}`}
+      className={`scroll-mt-[140px] ${industry.tint ? "bg-surface" : "bg-white"}`}
     >
       <div className="mx-auto max-w-6xl px-6 py-16 md:px-8 md:py-24">
         <motion.div
