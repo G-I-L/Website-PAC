@@ -4,23 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { EASE } from "@/lib/motion";
-import {
-  InstagramIcon,
-  LinkedinIcon,
-  FacebookIcon,
-  YoutubeIcon,
-} from "@/components/SocialIcons";
+import { LinkedinIcon } from "@/components/SocialIcons";
 
 const SOCIALS = [
-  {
-    name: "Instagram",
-    href: "#",
-    icon: InstagramIcon,
-    bg: "bg-gradient-to-tr from-[#FEDA75] via-[#D62976] to-[#4F5BD5]",
-  },
   { name: "LinkedIn", href: "#", icon: LinkedinIcon, bg: "bg-[#0A66C2]" },
-  { name: "Facebook", href: "#", icon: FacebookIcon, bg: "bg-[#1877F2]" },
-  { name: "YouTube", href: "#", icon: YoutubeIcon, bg: "bg-[#FF0000]" },
 ];
 
 const INDUSTRIES = [
