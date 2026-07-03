@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-navy/[0.06] bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-[92px] max-w-6xl items-center justify-between px-6 sm:h-[112px] md:h-[128px] md:px-8">
+      <div className="mx-auto flex h-[84px] max-w-6xl items-center justify-between px-6 sm:h-[96px] md:h-[108px] md:px-8">
         <Link href="/" className="inline-flex flex-none items-center">
           <Image
             src="/logo.png"
@@ -25,7 +25,7 @@ export default function Navbar() {
             width={923}
             height={346}
             priority
-            className="h-16 w-auto sm:h-20 md:h-24"
+            className="h-14 w-auto sm:h-16 md:h-20"
           />
         </Link>
 
