@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -17,13 +18,15 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 border-b border-navy/[0.06] bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-[78px] max-w-6xl items-center justify-between px-6 md:px-8">
-        <Link href="/" className="inline-flex items-center gap-3">
-          <span className="flex h-5 w-5 rotate-45 items-center justify-center rounded-[5px] bg-gold">
-            <span className="h-1.5 w-1.5 rounded-full bg-navy" />
-          </span>
-          <span className="text-[1.12rem] font-extrabold tracking-tight text-navy">
-            People Axis
-          </span>
+        <Link href="/" className="inline-flex items-center">
+          <Image
+            src="/logo.png"
+            alt="People Axis Consultants"
+            width={923}
+            height={346}
+            priority
+            className="h-11 w-auto md:h-12"
+          />
         </Link>
 
         <button
