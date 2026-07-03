@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { BellRing, Mail } from "lucide-react";
 
 export default function EmailAlertPreview() {
@@ -11,13 +12,13 @@ export default function EmailAlertPreview() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="order-2 md:order-1"
         >
           <p className="mb-3 text-[0.76rem] font-bold uppercase tracking-[0.15em] text-gold-dark">
             Step 6 of the pipeline
           </p>
-          <h2 className="text-[clamp(1.7rem,3.2vw,2.5rem)]">
+          <h2 className="text-[clamp(2rem,3.6vw,3rem)]">
             We email you. You don&rsquo;t go looking.
           </h2>
           <p className="mt-5 max-w-[46ch] text-[1rem] leading-relaxed text-muted">
@@ -35,7 +36,7 @@ export default function EmailAlertPreview() {
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
           className="order-1 overflow-hidden rounded-2xl border border-border bg-white shadow-[0_18px_40px_rgba(19,32,58,0.08)] md:order-2"
         >
           <div className="flex items-center gap-3 border-b border-border bg-navy px-6 py-4">

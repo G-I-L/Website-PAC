@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 
 const INDUSTRIES = [
   { href: "/industries#manufacturing", label: "Manufacturing" },
@@ -19,7 +23,13 @@ const COMPANY = [
 export default function Footer() {
   return (
     <footer className="bg-navy-dark text-footer-muted">
-      <div className="mx-auto max-w-6xl px-6 pb-[34px] pt-14 md:px-8 md:pt-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.7, ease: EASE }}
+        className="mx-auto max-w-6xl px-6 pb-[34px] pt-14 md:px-8 md:pt-16"
+      >
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 border-b border-white/[0.09] pb-11 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div className="col-span-2 md:col-span-1">
             <Link
@@ -103,7 +113,7 @@ export default function Footer() {
             </a>
           </p>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

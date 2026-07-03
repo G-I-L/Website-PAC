@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { type LucideIcon } from "lucide-react";
 
 export type RoleColumn = {
@@ -31,7 +32,7 @@ export default function IndustryBlock({ industry }: { industry: Industry }) {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-10 max-w-[70ch]"
         >
           <div className="mb-4 flex items-center gap-3.5">
@@ -42,7 +43,7 @@ export default function IndustryBlock({ industry }: { industry: Industry }) {
               {industry.n} · {industry.eyebrow}
             </span>
           </div>
-          <h2 className="text-[clamp(1.6rem,3vw,2.3rem)]">{industry.title}</h2>
+          <h2 className="text-[clamp(1.8rem,3.2vw,2.6rem)]">{industry.title}</h2>
           <p className="mt-3.5 text-[1.04rem] leading-relaxed text-muted">
             <strong className="text-navy">Our approach: </strong>
             {industry.approach}
@@ -58,7 +59,7 @@ export default function IndustryBlock({ industry }: { industry: Industry }) {
               viewport={{ once: true }}
               transition={{
                 duration: 0.5,
-                ease: "easeOut" as const,
+                ease: EASE,
                 delay: i * 0.08,
               }}
               className={`rounded-2xl border border-border p-7 ${

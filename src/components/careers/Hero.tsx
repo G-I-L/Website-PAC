@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { Sparkles, UploadCloud, Search } from "lucide-react";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut" as const, delay },
+  transition: { duration: 0.6, ease: EASE, delay },
 });
 
 export default function Hero() {
@@ -24,7 +25,7 @@ export default function Hero() {
 
         <motion.h1
           {...fadeUp(0.08)}
-          className="max-w-[18ch] text-[clamp(2.2rem,4.6vw,3.4rem)]"
+          className="max-w-[18ch] text-[clamp(2.5rem,5vw,4.2rem)]"
         >
           One Resume. <span className="text-gold">Every Company We Hire For.</span>
         </motion.h1>

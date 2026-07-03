@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
@@ -14,9 +14,23 @@ const LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-navy/[0.06] bg-white/90 backdrop-blur-md">
+    <nav
+      className={`sticky top-0 z-50 border-b bg-white/90 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled
+          ? "border-navy/[0.08] shadow-[0_6px_24px_rgba(19,32,58,0.06)]"
+          : "border-navy/[0.06] shadow-none"
+      }`}
+    >
       <div className="mx-auto flex h-[84px] max-w-6xl items-center justify-between px-6 sm:h-[96px] md:h-[108px] md:px-8">
         <Link href="/" className="inline-flex flex-none items-center">
           <Image
@@ -43,13 +57,20 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-[0.95rem] transition-colors hover:text-gold ${
+                className={`group relative inline-block py-1 text-[0.95rem] transition-colors hover:text-gold ${
                   link.href === "/careers"
                     ? "font-bold text-gold"
                     : "font-medium text-slate"
                 }`}
               >
                 {link.label}
+                <span
+                  className={`absolute -bottom-0.5 left-0 h-[1.5px] w-full origin-left bg-gold transition-transform duration-300 ${
+                    link.href === "/careers"
+                      ? "scale-x-100"
+                      : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </Link>
             </li>
           ))}

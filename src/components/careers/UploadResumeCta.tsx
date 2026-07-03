@@ -2,6 +2,7 @@
 
 import { useRef, useState, type DragEvent } from "react";
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { UploadCloud, FileCheck2 } from "lucide-react";
 
 export default function UploadResumeCta() {
@@ -26,7 +27,7 @@ export default function UploadResumeCta() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-3 text-[0.76rem] font-bold uppercase tracking-[0.15em] text-gold"
         >
           Get started
@@ -35,8 +36,8 @@ export default function UploadResumeCta() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.05 }}
-          className="text-[clamp(1.8rem,3.5vw,2.6rem)] !text-white"
+          transition={{ duration: 0.6, ease: EASE, delay: 0.05 }}
+          className="text-[clamp(2.1rem,3.8vw,3rem)] !text-white"
         >
           Upload your resume, we&rsquo;ll take it from there.
         </motion.h2>
@@ -45,7 +46,7 @@ export default function UploadResumeCta() {
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
           onDragOver={(e) => {
             e.preventDefault();
             setDragging(true);
@@ -92,7 +93,7 @@ export default function UploadResumeCta() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 0.15 }}
           className="mt-8 inline-flex items-center gap-2 rounded-[10px] bg-gold px-7 py-[14px] text-[0.95rem] font-bold text-navy transition-all hover:-translate-y-0.5 hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-50"
           disabled={!fileName}
         >

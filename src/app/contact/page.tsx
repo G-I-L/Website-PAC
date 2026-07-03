@@ -28,7 +28,7 @@ export default function ContactPage() {
               <PhoneCall size={15} />
               Contact
             </p>
-            <h1 className="max-w-[15ch] text-[clamp(1.9rem,3.8vw,3rem)]">
+            <h1 className="max-w-[15ch] text-[clamp(2.2rem,4.2vw,3.6rem)]">
               Get in Touch With <span className="text-gold">Our Team</span>
             </h1>
             <p className="mt-5 max-w-[48ch] text-[1.05rem] leading-relaxed text-muted">
@@ -79,7 +79,7 @@ export default function ContactPage() {
               <UserRound size={15} />
               For candidates
             </p>
-            <h2 className="text-[clamp(1.7rem,3.2vw,2.4rem)]">
+            <h2 className="text-[clamp(2rem,3.6vw,2.9rem)]">
               Looking for your next role?
             </h2>
             <p className="mt-4 max-w-[52ch] text-[1.02rem] leading-relaxed text-muted">

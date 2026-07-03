@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import Link from "next/link";
 import { Globe, ArrowRight, BadgeCheck, CircleCheck } from "lucide-react";
 
@@ -8,7 +9,7 @@ const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
-  transition: { duration: 0.6, ease: "easeOut" as const, delay },
+  transition: { duration: 0.6, ease: EASE, delay },
 });
 
 const SHORTLIST = [
@@ -34,7 +35,7 @@ export default function Hero() {
 
           <motion.h1
             {...fadeUp(0.06)}
-            className="max-w-[16ch] text-[clamp(2.4rem,4.8vw,3.8rem)]"
+            className="max-w-[16ch] text-[clamp(2.6rem,5.4vw,4.6rem)]"
           >
             Specialist Recruitment Solutions for{" "}
             <span className="text-gold">India&rsquo;s Leading Industries</span>

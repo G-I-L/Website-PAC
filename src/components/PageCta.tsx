@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import Link from "next/link";
 import { PhoneCall } from "lucide-react";
 
@@ -23,7 +24,7 @@ export default function PageCta({
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="flex flex-wrap items-center justify-between gap-10"
         >
           <div className="min-w-[280px] flex-1">

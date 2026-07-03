@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { FileText, Target, Send, Users, CircleCheck } from "lucide-react";
 
 const STEPS = [
@@ -59,7 +60,7 @@ export default function Timeline() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut" as const,
+                  ease: EASE,
                   delay: i * 0.06,
                 }}
                 className="relative flex gap-6 pb-10 last:pb-0"
@@ -80,7 +81,7 @@ export default function Timeline() {
                   <p className="mb-2 text-[0.72rem] font-bold uppercase tracking-wider text-faint">
                     {step.label}
                   </p>
-                  <h3 className="mb-2.5 text-[clamp(1.25rem,2.2vw,1.5rem)]">
+                  <h3 className="mb-2.5 text-[clamp(1.4rem,2.4vw,1.7rem)]">
                     {step.title}
                   </h3>
                   <p className="max-w-[62ch] text-[1rem] leading-relaxed text-muted">
@@ -96,7 +97,7 @@ export default function Timeline() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mt-10 rounded-[18px] border border-border bg-surface p-8"
         >
           <p className="mb-5 text-[0.74rem] font-bold uppercase tracking-[0.12em] text-gold-dark">

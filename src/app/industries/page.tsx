@@ -22,7 +22,7 @@ export default function IndustriesPage() {
             <Layers size={15} />
             Industries we serve
           </p>
-          <h1 className="max-w-[16ch] text-[clamp(2rem,3.9vw,3.1rem)]">
+          <h1 className="max-w-[16ch] text-[clamp(2.3rem,4.3vw,3.7rem)]">
             Industry-Specialised{" "}
             <span className="text-gold">Recruitment Services</span>
           </h1>

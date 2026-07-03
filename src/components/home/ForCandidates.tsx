@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import Link from "next/link";
 import { UserRound, ArrowRight, Sparkles } from "lucide-react";
 
@@ -12,7 +13,7 @@ export default function ForCandidates() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="flex flex-col items-start gap-8 rounded-3xl border border-border bg-surface p-8 md:flex-row md:items-center md:justify-between md:p-12"
         >
           <div className="flex items-start gap-5">
@@ -24,7 +25,7 @@ export default function ForCandidates() {
                 <UserRound size={15} />
                 For candidates
               </p>
-              <h2 className="text-[clamp(1.5rem,2.8vw,2.1rem)]">
+              <h2 className="text-[clamp(1.7rem,3vw,2.4rem)]">
                 Looking for your next role?
               </h2>
               <p className="mt-3 max-w-[52ch] text-[1rem] leading-relaxed text-muted">

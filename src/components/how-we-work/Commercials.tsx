@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { ClipboardList, Percent, Flag, ShieldCheck } from "lucide-react";
 
 const ITEMS = [
@@ -34,13 +35,13 @@ export default function Commercials() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-10"
         >
           <p className="mb-3 text-[0.76rem] font-bold uppercase tracking-[0.15em] text-gold-dark">
             Commercials
           </p>
-          <h2 className="text-[clamp(1.7rem,3.2vw,2.5rem)]">
+          <h2 className="text-[clamp(2rem,3.6vw,3rem)]">
             How the engagement works.
           </h2>
         </motion.div>
@@ -56,7 +57,7 @@ export default function Commercials() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut" as const,
+                  ease: EASE,
                   delay: i * 0.06,
                 }}
                 className="flex gap-4 rounded-2xl border border-border bg-white p-7 shadow-[0_10px_30px_rgba(19,32,58,0.04)] transition-all hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(19,32,58,0.09)]"

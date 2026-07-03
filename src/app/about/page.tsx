@@ -32,7 +32,7 @@ export default function AboutPage() {
             <Compass size={15} />
             About the firm
           </p>
-          <h1 className="max-w-[20ch] text-[clamp(1.9rem,3.7vw,3rem)]">
+          <h1 className="max-w-[20ch] text-[clamp(2.2rem,4.2vw,3.6rem)]">
             A Recruitment Firm Built on Two Decades of{" "}
             <span className="text-gold">Talent and Operations Leadership</span>
           </h1>

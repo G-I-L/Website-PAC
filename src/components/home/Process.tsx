@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { FileText, Target, Send, Users } from "lucide-react";
 
 const STEPS = [
@@ -42,13 +43,13 @@ export default function Process() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-12 max-w-[60ch]"
         >
           <p className="mb-3 text-[0.76rem] font-bold uppercase tracking-[0.15em] text-gold-dark">
             How we work
           </p>
-          <h2 className="text-[clamp(1.7rem,3.2vw,2.5rem)]">
+          <h2 className="text-[clamp(2rem,3.6vw,3rem)]">
             A defined process, run the way a plant runs — to specification,
             in sequence.
           </h2>
@@ -65,7 +66,7 @@ export default function Process() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut" as const,
+                  ease: EASE,
                   delay: i * 0.08,
                 }}
                 className="rounded-2xl border border-border bg-white p-7 shadow-[0_4px_20px_rgba(19,32,58,0.01)]"

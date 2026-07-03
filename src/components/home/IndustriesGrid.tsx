@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import Link from "next/link";
 import {
   Factory,
@@ -27,13 +28,13 @@ export default function IndustriesGrid() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mb-10 max-w-[60ch]"
         >
           <p className="mb-3 text-[0.76rem] font-bold uppercase tracking-[0.15em] text-gold-dark">
             Industries
           </p>
-          <h2 className="text-[clamp(1.7rem,3.2vw,2.5rem)]">
+          <h2 className="text-[clamp(2rem,3.6vw,3rem)]">
             Industry-specialised recruitment, from entry level to leadership.
           </h2>
         </motion.div>
@@ -49,7 +50,7 @@ export default function IndustriesGrid() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.5,
-                  ease: "easeOut" as const,
+                  ease: EASE,
                   delay: i * 0.05,
                 }}
               >
@@ -73,7 +74,7 @@ export default function IndustriesGrid() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" as const }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mt-7 max-w-[70ch] text-[1.02rem] text-muted"
         >
           Our recruitment consultants bring domain understanding to each

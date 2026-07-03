@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { EASE } from "@/lib/motion";
 import { UploadCloud, ArrowRight } from "lucide-react";
 
 export default function AudienceSplit() {
@@ -11,7 +12,7 @@ export default function AudienceSplit() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: EASE }}
           className="mx-auto max-w-xl rounded-2xl border border-border bg-surface p-8 text-center"
         >
           <span className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-cream text-gold-dark">
