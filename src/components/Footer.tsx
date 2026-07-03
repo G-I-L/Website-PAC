@@ -4,6 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { EASE } from "@/lib/motion";
+import {
+  InstagramIcon,
+  LinkedinIcon,
+  FacebookIcon,
+  YoutubeIcon,
+} from "@/components/SocialIcons";
+
+const SOCIALS = [
+  {
+    name: "Instagram",
+    href: "#",
+    icon: InstagramIcon,
+    bg: "bg-gradient-to-tr from-[#FEDA75] via-[#D62976] to-[#4F5BD5]",
+  },
+  { name: "LinkedIn", href: "#", icon: LinkedinIcon, bg: "bg-[#0A66C2]" },
+  { name: "Facebook", href: "#", icon: FacebookIcon, bg: "bg-[#1877F2]" },
+  { name: "YouTube", href: "#", icon: YoutubeIcon, bg: "bg-[#FF0000]" },
+];
 
 const INDUSTRIES = [
   { href: "/industries#manufacturing", label: "Manufacturing" },
@@ -49,6 +67,24 @@ export default function Footer() {
               BPO &amp; BPM and BFSI. Pan-India &amp; international, headquartered in
               Bengaluru.
             </p>
+
+            <div className="mt-5 flex items-center gap-3">
+              {SOCIALS.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`flex h-10 w-10 items-center justify-center rounded-full text-white shadow-[0_4px_14px_rgba(0,0,0,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_22px_rgba(0,0,0,0.35)] ${social.bg}`}
+                  >
+                    <Icon size={18} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           <div>
