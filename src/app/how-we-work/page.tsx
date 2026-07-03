@@ -5,6 +5,7 @@ import Timeline from "@/components/how-we-work/Timeline";
 import Commercials from "@/components/how-we-work/Commercials";
 import AfterShortlist from "@/components/how-we-work/AfterShortlist";
 import Faq from "@/components/how-we-work/Faq";
+import AnimatedHeading from "@/components/AnimatedHeading";
 import { Route } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -23,9 +24,14 @@ export default function HowWeWorkPage() {
             <Route size={15} />
             How we work
           </p>
-          <h1 className="max-w-[16ch] text-[clamp(2.3rem,4.3vw,3.7rem)]">
-            A Structured <span className="text-gold">Recruitment Methodology</span>
-          </h1>
+          <AnimatedHeading
+            as="h1"
+            className="max-w-[16ch] text-[clamp(2.3rem,4.3vw,3.7rem)]"
+            parts={[
+              { text: "A Structured" },
+              { text: "Recruitment Methodology", accent: true },
+            ]}
+          />
           <p className="mt-6 max-w-[56ch] text-[1.05rem] leading-relaxed text-muted">
             Our four-stage process ensures every mandate is executed with
             consistency — from role specification through search planning,

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { EASE } from "@/lib/motion";
 import Link from "next/link";
 import { Globe, ArrowRight, BadgeCheck, CircleCheck } from "lucide-react";
+import AnimatedHeading from "@/components/AnimatedHeading";
+import TiltCard from "@/components/TiltCard";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
@@ -33,13 +35,15 @@ export default function Hero() {
             Specialist recruitment · Pan-India &amp; International
           </motion.p>
 
-          <motion.h1
-            {...fadeUp(0.06)}
+          <AnimatedHeading
+            as="h1"
+            delay={0.06}
             className="max-w-[16ch] text-[clamp(2.6rem,5.4vw,4.6rem)]"
-          >
-            Specialist Recruitment Solutions for{" "}
-            <span className="text-gold">India&rsquo;s Leading Industries</span>
-          </motion.h1>
+            parts={[
+              { text: "Specialist Recruitment Solutions for" },
+              { text: "India’s Leading Industries", accent: true },
+            ]}
+          />
 
           <motion.p
             {...fadeUp(0.12)}
@@ -89,10 +93,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div
-          {...fadeUp(0.2)}
-          className="rounded-[20px] border border-navy/[0.06] bg-white/85 p-7 shadow-[0_24px_60px_rgba(19,32,58,0.06)] backdrop-blur"
-        >
+        <motion.div {...fadeUp(0.2)} style={{ perspective: 1200 }}>
+        <TiltCard className="rounded-[20px] border border-navy/[0.06] bg-white/85 p-7 shadow-[0_24px_60px_rgba(19,32,58,0.06)] backdrop-blur">
           <div className="mb-5 flex items-center justify-between">
             <span className="text-[0.92rem] font-bold text-navy">
               Search plan
@@ -162,6 +164,7 @@ export default function Hero() {
               Delivered
             </span>
           </div>
+        </TiltCard>
         </motion.div>
       </div>
     </header>

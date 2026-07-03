@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { EASE } from "@/lib/motion";
 import { BellRing, Mail } from "lucide-react";
+import TiltCard from "@/components/TiltCard";
 
 export default function EmailAlertPreview() {
   return (
@@ -37,8 +38,10 @@ export default function EmailAlertPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: EASE, delay: 0.1 }}
-          className="order-1 overflow-hidden rounded-2xl border border-border bg-white shadow-[0_18px_40px_rgba(19,32,58,0.08)] md:order-2"
+          className="order-1 md:order-2"
+          style={{ perspective: 1200 }}
         >
+        <TiltCard className="overflow-hidden rounded-2xl border border-border bg-white shadow-[0_18px_40px_rgba(19,32,58,0.08)]">
           <div className="flex items-center gap-3 border-b border-border bg-navy px-6 py-4">
             <span className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-gold text-navy">
               <Mail size={16} />
@@ -72,6 +75,7 @@ export default function EmailAlertPreview() {
               </div>
             ))}
           </div>
+        </TiltCard>
         </motion.div>
       </div>
     </section>

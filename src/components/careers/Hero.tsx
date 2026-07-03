@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { EASE } from "@/lib/motion";
 import { Sparkles, UploadCloud, Search } from "lucide-react";
+import AnimatedHeading from "@/components/AnimatedHeading";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 16 },
@@ -23,12 +24,15 @@ export default function Hero() {
           Careers at People Axis
         </motion.p>
 
-        <motion.h1
-          {...fadeUp(0.08)}
+        <AnimatedHeading
+          as="h1"
+          delay={0.08}
           className="max-w-[18ch] text-[clamp(2.5rem,5vw,4.2rem)]"
-        >
-          One Resume. <span className="text-gold">Every Company We Hire For.</span>
-        </motion.h1>
+          parts={[
+            { text: "One Resume." },
+            { text: "Every Company We Hire For.", accent: true },
+          ]}
+        />
 
         <motion.p
           {...fadeUp(0.14)}

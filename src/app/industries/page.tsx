@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import PageCta from "@/components/PageCta";
 import IndustriesList from "@/components/industries/IndustriesList";
 import { INDUSTRIES } from "@/components/industries/data";
+import AnimatedHeading from "@/components/AnimatedHeading";
 import { Layers } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -22,10 +23,14 @@ export default function IndustriesPage() {
             <Layers size={15} />
             Industries we serve
           </p>
-          <h1 className="max-w-[16ch] text-[clamp(2.3rem,4.3vw,3.7rem)]">
-            Industry-Specialised{" "}
-            <span className="text-gold">Recruitment Services</span>
-          </h1>
+          <AnimatedHeading
+            as="h1"
+            className="max-w-[16ch] text-[clamp(2.3rem,4.3vw,3.7rem)]"
+            parts={[
+              { text: "Industry-Specialised" },
+              { text: "Recruitment Services", accent: true },
+            ]}
+          />
           <p className="mt-6 max-w-[56ch] text-[1.05rem] leading-relaxed text-muted">
             Every industry demands a distinct recruitment approach — in how
             candidates are sourced, what credentials are verified, and what

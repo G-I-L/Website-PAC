@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PhoneCall, Mail, Phone, MapPin, UserRound, ShieldAlert } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
+import AnimatedHeading from "@/components/AnimatedHeading";
 
 export const metadata: Metadata = {
   title: "Contact Us | Register a Vacancy | People Axis Consultants, Bangalore",
@@ -28,9 +29,14 @@ export default function ContactPage() {
               <PhoneCall size={15} />
               Contact
             </p>
-            <h1 className="max-w-[15ch] text-[clamp(2.2rem,4.2vw,3.6rem)]">
-              Get in Touch With <span className="text-gold">Our Team</span>
-            </h1>
+            <AnimatedHeading
+              as="h1"
+              className="max-w-[15ch] text-[clamp(2.2rem,4.2vw,3.6rem)]"
+              parts={[
+                { text: "Get in Touch With" },
+                { text: "Our Team", accent: true },
+              ]}
+            />
             <p className="mt-5 max-w-[48ch] text-[1.05rem] leading-relaxed text-muted">
               Register a vacancy or request a call back for a confidential
               discussion about your hiring needs. One of our consultants

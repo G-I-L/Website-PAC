@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Breadcrumb from "@/components/Breadcrumb";
 import WhyPeopleAxis from "@/components/WhyPeopleAxis";
 import PageCta from "@/components/PageCta";
+import AnimatedHeading from "@/components/AnimatedHeading";
 import { Compass } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -32,10 +33,14 @@ export default function AboutPage() {
             <Compass size={15} />
             About the firm
           </p>
-          <h1 className="max-w-[20ch] text-[clamp(2.2rem,4.2vw,3.6rem)]">
-            A Recruitment Firm Built on Two Decades of{" "}
-            <span className="text-gold">Talent and Operations Leadership</span>
-          </h1>
+          <AnimatedHeading
+            as="h1"
+            className="max-w-[20ch] text-[clamp(2.2rem,4.2vw,3.6rem)]"
+            parts={[
+              { text: "A Recruitment Firm Built on Two Decades of" },
+              { text: "Talent and Operations Leadership", accent: true },
+            ]}
+          />
         </div>
       </header>
 
