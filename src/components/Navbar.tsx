@@ -17,15 +17,15 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 border-b border-navy/[0.06] bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex h-[78px] max-w-6xl items-center justify-between px-6 md:px-8">
-        <Link href="/" className="inline-flex items-center">
+      <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-6 sm:h-[84px] md:h-[92px] md:px-8">
+        <Link href="/" className="inline-flex flex-none items-center">
           <Image
             src="/logo.png"
             alt="People Axis Consultants"
             width={923}
             height={346}
             priority
-            className="h-11 w-auto md:h-12"
+            className="h-12 w-auto sm:h-14 md:h-16"
           />
         </Link>
 
