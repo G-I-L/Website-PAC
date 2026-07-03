@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/careers/Hero";
 import AudienceSplit from "@/components/careers/AudienceSplit";
-import HowItWorks from "@/components/careers/HowItWorks";
 import TrustedCompanies from "@/components/careers/TrustedCompanies";
-import ResumeDashboard from "@/components/careers/ResumeDashboard";
 import EmailAlertPreview from "@/components/careers/EmailAlertPreview";
 import UploadResumeCta from "@/components/careers/UploadResumeCta";
 
@@ -18,9 +16,7 @@ export default function CareersPage() {
     <>
       <Hero />
       <AudienceSplit />
-      <HowItWorks />
       <TrustedCompanies />
-      <ResumeDashboard />
       <EmailAlertPreview />
       <UploadResumeCta />
     </>
