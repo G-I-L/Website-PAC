@@ -19,8 +19,10 @@ const SHORTLIST = [
 
 export default function Hero() {
   return (
-    <header className="border-b border-border bg-gradient-to-b from-white to-surface">
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:py-24">
+    <header className="relative overflow-hidden border-b border-border bg-gradient-to-b from-white to-surface">
+      <div className="pointer-events-none absolute -top-24 left-1/3 h-[420px] w-[420px] rounded-full bg-gold/[0.10] blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -right-24 h-[380px] w-[380px] rounded-full bg-navy/[0.06] blur-3xl" />
+      <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-16 md:grid-cols-[1.05fr_0.95fr] md:px-8 md:py-28">
         <div>
           <motion.p
             {...fadeUp(0)}
@@ -32,7 +34,7 @@ export default function Hero() {
 
           <motion.h1
             {...fadeUp(0.06)}
-            className="max-w-[16ch] text-[clamp(2.2rem,4.4vw,3.4rem)]"
+            className="max-w-[16ch] text-[clamp(2.4rem,4.8vw,3.8rem)]"
           >
             Specialist Recruitment Solutions for{" "}
             <span className="text-gold">India&rsquo;s Leading Industries</span>
